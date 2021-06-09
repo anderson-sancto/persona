@@ -1,0 +1,1 @@
+Projeto para geração de personas de forma simples. O sistema armazena as personas e é possível deletar as mesmas.
