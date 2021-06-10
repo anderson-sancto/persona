@@ -5,7 +5,7 @@ include("./model/variaveis.php");
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
    <title>Gerador de personas</title>
@@ -26,7 +26,7 @@ include("./model/variaveis.php");
 </head>
 
 <body>
-   <!-- MENU BAR -->
+   <!-- Nav bar -->
    <nav class="navbar navbar-expand-lg">
       <div class="container">
          <a class="navbar-brand" href="index.php">
@@ -45,13 +45,14 @@ include("./model/variaveis.php");
          </div>
       </div>
    </nav>
-   <!-- HERO -->
+   <!-- Hero -->
    <section class="hero hero-bg d-flex justify-content-center align-items-center">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                <div class="hero-text">
-                  <h1 class="text-white" data-aos="fade-up">Gere suas personas de maneira rápida e eficiente</h1>
+                  <h1 class="text-white" data-aos="fade-up">Gere suas personas de maneira <strong>rápida</strong> e <strong>eficiente</strong>
+                  </h1>
                   <a href="#about" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Iniciar!</a>
                </div>
             </div>
@@ -63,7 +64,7 @@ include("./model/variaveis.php");
          </div>
       </div>
    </section>
-   <!-- ABOUT -->
+   <!-- Conteúdo principal -->
    <section class="about section-padding pb-0" id="about">
       <div class="container">
          <div class="row">
@@ -80,15 +81,14 @@ include("./model/variaveis.php");
    <!--Form-->
    <section class="form" id="">
       <form method="POST" action="/persona/control/ctr-cadastro-persona.php">
-         <!--teste-->
          <h3 class="titulo-avatar">Para começar, selecione um avatar que represente sua persona!</h3>
          <div class="form-row avatar-persona">
             <div class="form-check form-check-inline form-group col-md-2">
-               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="https://i.ibb.co/s3YTFNW/avatar1.png">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="https://i.ibb.co/s3YTFNW/avatar1.png" required>
                <label class="form-check-label" for="inlineRadio1"><img src="https://i.ibb.co/s3YTFNW/avatar1.png" class="img-thumbnail" alt="Avatar1"></label>
             </div>
             <div class="form-check form-check-inline form-group col-md-2">
-               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="https://i.ibb.co/xzrZsHJ/avatar2.png">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="https://i.ibb.co/xzrZsHJ/avatar2.png" required>
                <label class="form-check-label" for="inlineRadio2"><img src="https://i.ibb.co/xzrZsHJ/avatar2.png" class="img-thumbnail" alt="Avatar2"></label>
             </div>
             <div class="form-check form-check-inline form-group col-md-2">
@@ -100,19 +100,18 @@ include("./model/variaveis.php");
                <label class="form-check-label" for="inlineRadio4"><img src="https://i.ibb.co/p012xKX/avatar4.png" class="img-thumbnail" alt="..."> </label>
             </div>
          </div>
-         <!---->
          <div class="form-row">
             <div class="form-group col-md-6">
                <label for="personaname">Nome da persona</label>
-               <input type="text" class="form-control" id="personaname" name="nome">
+               <input type="text" class="form-control" id="personaname" name="nome" required>
             </div>
             <div class="form-group col-md-3">
                <label for="personayearold">Idade</label>
-               <input type="text" class="form-control" id="personayearold" name="idade">
+               <input type="text" class="form-control" id="personayearold" name="idade" required>
             </div>
             <div class="form-group col-md-3">
                <label for="personacountry">Gênero</label>
-               <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="genero">
+               <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="genero" required>
                   <option selected>Selecione</option>
                   <option value="M">M</option>
                   <option value="F">F</option>
@@ -122,29 +121,29 @@ include("./model/variaveis.php");
          <div class="form-row">
             <div class="form-group col-md-6">
                <label for="personajob">Profissão</label>
-               <input type="text" class="form-control" id="personajob" name="profissao">
+               <input type="text" class="form-control" id="personajob" name="profissao" required>
             </div>
             <div class="form-group col-md-6">
                <label for="personasalary">Salário</label>
-               <input type="text" class="form-control" id="personasalary" name="salario">
+               <input type="text" class="form-control" id="personasalary" name="salario" required>
             </div>
          </div>
          <div class="form-group">
             <label for="personahobbie">Hobbies</label>
-            <textarea class="form-control" id="personahobbie" rows="4" placeholder="Ex: Jogar bolar, ver seriados, ler livros, etc" name="hobbie"></textarea>
+            <textarea class="form-control" id="personahobbie" rows="4" placeholder="Ex: Jogar bolar, ver seriados, ler livros, etc" name="hobbie" maxlength="500" required></textarea>
          </div>
          <div class="form-row">
             <div class="form-group col-md-5">
                <label for="personadistrict">Bairro</label>
-               <input type="text" class="form-control" id="personadistrict" name="bairro">
+               <input type="text" class="form-control" id="personadistrict" name="bairro" required>
             </div>
             <div class="form-group col-md-5">
                <label for="personacity">Cidade</label>
-               <input type="text" class="form-control" id="personacity" name="cidade">
+               <input type="text" class="form-control" id="personacity" name="cidade" required>
             </div>
             <div class="form-group col-md-2">
                <label for="personacountry">Estado</label>
-               <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="estado">
+               <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="estado" required>
                   <option selected>Selecione</option>
                   <option>AC</option>
                   <option>AL</option>
